@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+
+		<title>Sign Up</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="whhg.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="Authentication.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<style>
+
+			.panel-default{
+				position: absolute;
+				top: 70px;
+				left: 920px;
+				width: 320px;
+				height: 540px;
+			}
+
+			.container-fluid{
+				position: relative;
+			}
+
+			#submit{
+				color: #ffe695;
+				background-color: maroon;
+				border-color: transparent;
+			}
+
+			#submit:hover{
+				background-color: #d52d54;
+			}
+
+			.validate{
+				border-bottom: 0px black;
+				font-size: 10px;
+				color: #874737;
+			}
+
+			#hvacct{
+				text-decoration: none;
+				color: #763626;
+				font-size: 15px;
+			}
+
+			#hvacct:hover{
+				text-decoration: none;
+				color: #585868;
+				font-size: 15px
+			}
+
+		</style>
+	
+	</head>
+
+	<body style="background-image: url(backdrop.jpg);background-repeat: no-repeat;background-size: 100% 100%;font-family: 'Lobster Two';background-attachment: fixed">
+
+		<div class="container-fluid">
+			<div class="panel panel-default" style="background: rgba(255,255,255,0.5)">
+	  			<div class="panel-body">
+	 				<div style="font-size: 20px;text-align: center"><p>Sign Up</p></div>
+	 				<p id="txtHint" style="font-size: 15px;color: maroon;text-align: center"></p>
+	 				<form id="sign_up">
+						<div style="position: relative">
+							<div style="margin-bottom: 25px" class="input-group">
+	                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                            <input id="fname" type="text" class="form-control" name="fname" value="" placeholder="First Name">
+	                        </div>
+	                        <p class="validate" id="chkfname" size="50" style="position: absolute;top: 35px"></p>
+                    	</div>
+    					<div style="position: relative">                	
+						  	<div style="margin-bottom: 25px" class="input-group">
+	                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                            <input id="lname" type="text" class="form-control" name="lname" value="" placeholder="Last Name">
+	                        </div>
+	                        <p class="validate" id="chklname" size="50" style="position: absolute;top: 35px"></p>
+                        </div>
+                        <div style="position: relative">
+	                        <div style="margin-bottom: 25px" class="input-group">
+	                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+	                            <input id="email" type="text" class="form-control" name="email" value="" placeholder="Email ID">
+	                        </div>
+	                        <p class="validate" id="chkemail" size="50" style="position: absolute;top: 35px"></p>
+                        </div>
+                        <div style="position: relative">
+	                        <div style="margin-bottom: 25px" class="input-group">
+	                            <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+	                            <input id="username" type="text" class="form-control" name="username" value="" placeholder="Username">
+	                        </div>
+                        	<p class="validate" id="chkuname" size="50" style="position: absolute;top: 35px"></p>
+                    	</div>
+                    	<div style="position: relative">
+	                        <div style="margin-bottom: 25px" class="input-group">
+	                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+	                            <input id="pwd1" type="password" class="form-control" name="pwd1" value="" placeholder="Password">
+	                        </div>
+	                        <p class="validate" id="chkpwd" size="50" style="position: absolute;top: 35px"></p>
+                        </div>
+                        <div style="position: relative">
+	                        <div style="margin-bottom: 25px" class="input-group">
+	                            <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
+	                            <input id="pwd2" type="password" class="form-control" name="pwd2" value="" placeholder="Re-Enter Password" onblur="const(this)">
+	                        </div>
+	                        <p class="validate" id="alert" size="50" style="position: absolute;top: 35px"></p>
+                        </div>
+					  	<button id="submit" type="button" class="btn btn-default btn-block" onclick="validate()">Continue</button>
+					</form>
+					<div id="message" style="position: absolute;top: 500px;left: 80px">
+						<p style="font-size: 15px">Have an account? <a id="hvacct" href="Trial_SignIn.php">Sign In</a></p>
+					</div>
+	 			</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
