@@ -69,18 +69,20 @@
 			</div>
 		</div>
 		<div class="container">
-			<ul class="nav nav-pills">
+		<div class="row">
+			<ul class="nav nav-pills col-md-9">
 	  			<li class="active"><a href="Home_Page.php">Home</a></li>
 	  			<li><a href="Movies.html">Movies</a></li>
 	  			<li><a href="TV_Shows.html">TV Shows</a></li>
 	  			<li><a href="anime.html">Anime</a></li>
 			</ul>
-
-			<form method="POST" action="Search_Page.php">
-				<input type="text" name="search" id="search"><span class="glyphicon glyphicon-user"></span>
-				<button type="submit">Search</button>
-			</form>
-
+			<div class="search-bar col-md-3">
+				<form method="POST" action="Search_Page.php">
+					<input type="text" placeholder="Search" name="search" id="search">
+					<button type="submit" class="search-btn"><span class="glyphicon glyphicon-search">&nbsp;</button>
+				</form>
+			</div>
+		</div>
 			<div class="our-picks">
 				<h2 class="heading">Our Picks</h3>
 				<hr>
@@ -152,56 +154,230 @@
 			<br>
 			<h2 class="heading">Top Rated Movies</h2>
 				<hr>
-				<div id="carousel">
+				<div class="container caro">
+						<div id="carousel">
+							<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/pulp-fiction.jpg" alt="Pulp-Fiction">
+								<div class="overlay">
+           								<h2>Pulp Fiction</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+							<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/Godfather.jpg" alt="Godfather">
+								<div class="overlay">
+           								<h2>The Godfather</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/fight-club.jpg" alt="Fight Club">
+								<div class="overlay">
+           								<h2>Fight Club</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/DarkKnight.jpg" alt="Dark Knight">
+								<div class="overlay">
+           								<h2>The Dark Knight</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/12-angry-men.jpg" alt="12 Angry Men">
+								<div class="overlay">
+           								<h2>12 Angry Men</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/shawshank.jpg" alt="The Shawshank Redemption">
+								<div class="overlay">
+           								<h2>The Shawshank Redemption</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/lotr.jpg" alt="Lord Of The Rings">
+								<div class="overlay">
+           								<h2>Lord Of The Rings : Return Of The King</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/gbu.jpg" alt="The Good, the Bad and the Ugly">
+								<div class="overlay">
+           								<h2>The Good, the Bad and the Ugly </h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/schindlers-list.jpg" alt="Schindler's List">
+								<div class="overlay">
+           								<h2>Schindler's List</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+						</div>
+					</div>
+				<!--<div id="carousel">
   					<figure id="spinner" class="spinnerM">
-    							<img src="Images\shawshank.jpg" class="caro-img  img-responsive" alt>
-      					      <img src="Images\Godfather.jpg" class="caro-img  img-responsive" alt>
-    						    	<img src="Images\DarkKnight.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\schindlers-list.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\12-angry-men.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\pulp-fiction.jpg" class="caro-img  img-responsive" alt>   								<img src="fight-club.jpg" class="caro-img  img-responsive" alt>
-    				  			<img src="Images\lotr.jpg" class="caro-img  img-responsive" alt>
+    							<img src="shawshank.jpg" class="caro-img"  img-responsive" alt>
+      					      <img src="Godfather.jpg" class="caro-img  img-responsive" alt>
+    						    	<img src="DarkKnight.jpg" class="caro-img  img-responsive" alt>
+    							<img src="schindlers-list.jpg" class="caro-img  img-responsive" alt>
+    							<img src="12-angry-men.jpg" class="caro-img  img-responsive" alt>
+    							<img src="pulp-fiction.jpg" class="caro-img  img-responsive" alt>   								<img src="fight-club.jpg" class="caro-img  img-responsive" alt>
+    				  			<img src="lotr.jpg" class="caro-img  img-responsive" alt>
   					</figure>
 				</div>
 				<span style="float:left" class="ss-icon" onclick="galleryspin('-','span1')">&lt;</span>
-				<span style="float:right" class="ss-icon" onclick="galleryspin('','span1')">&gt;</span>
+				<span style="float:right" class="ss-icon" onclick="galleryspin('','span1')">&gt;</span>-->
 				
 				<br>
 			<br>
 			<h2 class="heading">Top Rated TV Shows</h2>
 				<hr>
-				<div id="carousel">
-  					<figure id="spinner" class="spinnerT">
-    							<img src="Images\BOB.jpg" class="caro-img  img-responsive" alt>
-      					      <img src="Images\BB.jpg" class="caro-img  img-responsive" alt>
-    						    	<img src="Images\GOT.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\sherlock.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\the-wire.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\stranger-things.jpg" class="caro-img  img-responsive" alt>   								<img src="friends.jpg" class="caro-img  img-responsive" alt>
-    				  			<img src="Images\narcos.jpg" class="caro-img  img-responsive" alt>
-  					</figure>
-				</div>
-				<span style="float:left" class="ss-icon" onclick="galleryspin('-','span2')">&lt;</span>
-				<span style="float:right" class="ss-icon"  onclick="galleryspin('','span2')">&gt;</span>
-				
+					<div class="container caro">
+						<div id="carousel">
+							<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/BB.jpg" alt="Breaking Bad">
+								<div class="overlay">
+           								<h2>Breaking Bad</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+							<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/GOT.jpg" alt="Game Of Thrones">
+								<div class="overlay">
+           								<h2>Game Of Thrones</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/BOB.jpg" alt="Band Of Brothers">
+								<div class="overlay">
+           								<h2>Band Of Brothers</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/the-wire.jpg" alt="The Wire">
+								<div class="overlay">
+           								<h2>The Wire</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/td.jpg" alt="True Detective">
+								<div class="overlay">
+           								<h2>True Detective</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/friends.jpg" alt="Friends">
+								<div class="overlay">
+           								<h2>Friends</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/sherlock.jpg" alt="Sherlock">
+								<div class="overlay">
+           								<h2>Sherlock</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/jo.jpg" alt="Last Week Tonight with John Oliver ">
+								<div class="overlay">
+           								<h2>Last Week Tonight with John Oliver </h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/fargo.jpg" alt="Fargo">
+								<div class="overlay">
+           								<h2>Fargo</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+						</div>
+					</div>
 				
 			<br>
 			<br>
 			<h2 class="heading">Top Rated Anime</h2>
 				<hr>
-				<div id="carousel">
-  					<figure id="spinner" class="spinnerA">
-  					 		<img src="Images\fma.jpg" class="caro-img  img-responsive" alt>
-      					      <img src="Images\one-punch-man.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\Death-Note.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\op.jpg" class="caro-img  img-responsive" alt>
-    							<img src="Images\cowboy-bebop.jpg" class="caro-img  img-responsive" alt>  
-    							<img src="Images\avatar.jpg" class="caro-img  img-responsive" alt> 							<img src="hxh.png" class="caro-img  img-responsive" alt>
-    				  			<img src="Images\naruto.jpg" class="caro-img  img-responsive" alt>
-  					</figure>
-				</div>
-				<span style="float:left" class="ss-icon" onclick="galleryspin('-','span3')" >&lt;</span>
-				<span style="float:right" class="ss-icon" onclick="galleryspin('','span3')">&gt;</span>
+					<div class="container caro">
+						<div id="carousel">
+							<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/fma.jpg" alt="Full Metal Alchemist">
+								<div class="overlay">
+           								<h2>Full Metal Alchemist</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+							<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/hxh.png" alt="Hunter X Hunter">
+								<div class="overlay">
+           								<h2>Hunter X Hunter</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/Naruto.jpg" alt="Naruto">
+								<div class="overlay">
+           								<h2>Naruto</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/dbz.jpg" alt="Dragon Ball Z">
+								<div class="overlay">
+           								<h2>Dragon Ball Z</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/op.jpg" alt="One Piece">
+								<div class="overlay">
+           								<h2>One Piece</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/one-punch-man.jpg" alt="One Puch Man">
+								<div class="overlay">
+           								<h2>One Punch Man</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/avatar.jpg" alt="Avatar: The Last Airbender">
+								<div class="overlay">
+           								<h2>Avatar: The Last Airbender</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/cowboy-bebop.jpg" alt="Cowboy Bebop">
+								<div class="overlay">
+           								<h2>Cowboy Bebop</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+        						<figure><div class="hovereffect">
+							<img class="img-responsive caro-img" src="Images/Death-Note.jpg" alt="Death Note">
+								<div class="overlay">
+           								<h2>Death Note</h2>
+           								<a class="info" href="#">Read More..</a>
+        							</div>
+        						</div></figure>
+						</div>
+					</div>
 				
 			<br>
 			<br>
