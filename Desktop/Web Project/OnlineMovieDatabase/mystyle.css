@@ -44,12 +44,11 @@ li
 }
 .page-header
 {
-	background-color: black;
-	color: ;
 	font-family: 'Lobster Two';
 	height: 150px;
 	width: 100%;
 	margin-top: 0px;
+	border:none;
 }
 
 .nav-pills
@@ -311,7 +310,7 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
 
 .logo
 {
-	position:relative ;top:25px ; left:18px;height:125px;width:125px;
+	position:relative ;top:25px ; left:500px;height:125px;width:400px;
 }
 
 .filter-box
