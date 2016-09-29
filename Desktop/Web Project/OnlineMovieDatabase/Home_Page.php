@@ -160,63 +160,63 @@
 							<img class="img-responsive caro-img" src="Images/pulp-fiction.jpg" alt="Pulp-Fiction">
 								<div class="overlay">
            								<h2>Pulp Fiction</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=680">Read More..</a>
         							</div>
         						</div></figure>
 							<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/Godfather.jpg" alt="Godfather">
 								<div class="overlay">
            								<h2>The Godfather</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=238">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/fight-club.jpg" alt="Fight Club">
 								<div class="overlay">
            								<h2>Fight Club</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=550">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/DarkKnight.jpg" alt="Dark Knight">
 								<div class="overlay">
            								<h2>The Dark Knight</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=155">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/12-angry-men.jpg" alt="12 Angry Men">
 								<div class="overlay">
            								<h2>12 Angry Men</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=389">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/shawshank.jpg" alt="The Shawshank Redemption">
 								<div class="overlay">
            								<h2>The Shawshank Redemption</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=278">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/lotr.jpg" alt="Lord Of The Rings">
 								<div class="overlay">
            								<h2>Lord Of The Rings : Return Of The King</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=122">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/gbu.jpg" alt="The Good, the Bad and the Ugly">
 								<div class="overlay">
            								<h2>The Good, the Bad and the Ugly </h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=429">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/schindlers-list.jpg" alt="Schindler's List">
 								<div class="overlay">
            								<h2>Schindler's List</h2>
-           								<a class="info" href="#">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=424">Read More..</a>
         							</div>
         						</div></figure>
 						</div>
