@@ -6,6 +6,7 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<script src="Authentication.js"></script>
 		<script>
 			 var anglem = 0;
 			 var anglet=0;
@@ -45,10 +46,11 @@
 				<ul class="dropdown-menu">
 					<?php
 						
+						$user = "";
 						session_start();
-
 						if(isset($_SESSION["prompt"]))
 						{
+							$user = $_SESSION["UserName"];
 							echo '<li><a href="User_Profile.php">' . $_SESSION["UserName"] . '</a></li>
 							<li class="divider"></li>
 							<li><a href="Logout.php">Sign Out  <span class="glyphicon glyphicon-log-out"></span></a></li>
@@ -57,6 +59,7 @@
 						
 						else
 						{
+							$user = "Guest";
 							echo '<li><a href="#">Hi Guest</a></li>
 							<li class="divider"></li>
 							<li><a href="Log_In.php">Log In  <span class="glyphicon glyphicon-log-out"></span></a></li>
@@ -91,7 +94,7 @@
 						<img class="col-sm-3 pick-img img-responsive" src="Images\interstellar.jpg" alt="Interstellar">
 							<div class="overlay">
            							<h2>Interstellar</h2>
-           							<a class="info" href="Movie_Landing.php?id=157336">Read More..</a>
+           							<a class="info" href="Movie_Landing.php?id=157336" onclick="return priority('157336','<?php echo $user;?>','M')">Read More..</a>
         						</div>
         				</div>
         				<div class="hovereffect">
@@ -124,7 +127,6 @@
 	    				<li data-target="#myCarousel" data-slide-to="2"></li>
 	    				<li data-target="#myCarousel" data-slide-to="3"></li>
 	  			</ol>
-
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
 						<img src="GOT.jpg" alt="GOT" width="460" height="345">
@@ -160,63 +162,63 @@
 							<img class="img-responsive caro-img" src="Images/pulp-fiction.jpg" alt="Pulp-Fiction">
 								<div class="overlay">
            								<h2>Pulp Fiction</h2>
-           								<a class="info" href="Movie_Landing.php?id=680">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=680" onclick="return priority('680','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
 							<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/Godfather.jpg" alt="Godfather">
 								<div class="overlay">
            								<h2>The Godfather</h2>
-           								<a class="info" href="Movie_Landing.php?id=238">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=238" onclick="return priority('238','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/fight-club.jpg" alt="Fight Club">
 								<div class="overlay">
            								<h2>Fight Club</h2>
-           								<a class="info" href="Movie_Landing.php?id=550">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=550" onclick="return priority('550','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/DarkKnight.jpg" alt="Dark Knight">
 								<div class="overlay">
            								<h2>The Dark Knight</h2>
-           								<a class="info" href="Movie_Landing.php?id=155">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=155" onclick="return priority('155','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/12-angry-men.jpg" alt="12 Angry Men">
 								<div class="overlay">
            								<h2>12 Angry Men</h2>
-           								<a class="info" href="Movie_Landing.php?id=389">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=389" onclick="return priority('389','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/shawshank.jpg" alt="The Shawshank Redemption">
 								<div class="overlay">
            								<h2>The Shawshank Redemption</h2>
-           								<a class="info" href="Movie_Landing.php?id=278">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=278" onclick="return priority('278','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/lotr.jpg" alt="Lord Of The Rings">
 								<div class="overlay">
            								<h2>Lord Of The Rings : Return Of The King</h2>
-           								<a class="info" href="Movie_Landing.php?id=122">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=122" onclick="return priority('122','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/gbu.jpg" alt="The Good, the Bad and the Ugly">
 								<div class="overlay">
            								<h2>The Good, the Bad and the Ugly </h2>
-           								<a class="info" href="Movie_Landing.php?id=429">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=429" onclick="return priority('429','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
 							<img class="img-responsive caro-img" src="Images/schindlers-list.jpg" alt="Schindler's List">
 								<div class="overlay">
            								<h2>Schindler's List</h2>
-           								<a class="info" href="Movie_Landing.php?id=424">Read More..</a>
+           								<a class="info" href="Movie_Landing.php?id=424" onclick="return priority('424','<?php echo $user;?>','M')">Read More..</a>
         							</div>
         						</div></figure>
 						</div>
@@ -392,7 +394,55 @@
 				<h2 class="heading">You recently Viewed</h3>
 				<hr>
 				<div class="row">
-					<div class="hovereffect">
+					<?php
+
+					if($user != "Guest")
+					{
+						include('Database API\tmdb-api.php');
+		                include('Database API\Configuration\default.php');
+		                $tmdb = new TMDB($cnf);
+
+						mysql_connect("localhost","root","");
+						mysql_select_db("login_db");
+
+						$i = 0;
+
+						$result = mysql_query("select * from user_priorities where UserName = '$user' order by TimeStamp DESC") or die("The query failed!");
+						while($row = mysql_fetch_array($result))
+						{
+							$i = $i+1;
+							if($row['Extra'] == 'M')
+							{
+								$movie = $tmdb->getMovie($row['ID']);
+								echo '<div class="hovereffect">
+								<img class="col-sm-3 pick-img img-responsive" src="'. $tmdb->getImageURL('w185') . $movie->getPoster() .'" alt="Interstellar">
+									<div class="overlay">
+		           							<h2>' . $movie->getTitle() . '</h2>
+		           							<a class="info" href="Movie_Landing.php?id=' . $movie->getID() . '" onclick="return priority(\'' . $movie->getID() . '\',\'' . $user . '\',\'M\')">Read More..</a>
+		        						</div>
+		        				</div>';
+	        				}
+	        				else
+	        				{
+	        					$tvshow = $tmdb->getTVShow($row['ID']);
+								echo '<div class="hovereffect">
+								<img class="col-sm-3 pick-img img-responsive" src="'. $tmdb->getImageURL('w185') . $tvshow->getPoster() .'" alt="Interstellar">
+									<div class="overlay">
+		           							<h2>' . $tvshow->getName() . '</h2>
+		           							<a class="info" href="#">Read More..</a>
+		        						</div>
+		        				</div>';	
+	        				}
+
+        					if($i == 4)
+        						break;
+						}
+					}
+
+					else
+					{	
+					
+					echo'<div class="hovereffect">
 						<img class="col-sm-3 pick-img img-responsive" src="Images\interstellar.jpg" alt="Interstellar">
 							<div class="overlay">
            							<h2>Interstellar</h2>
@@ -419,7 +469,9 @@
            							<h2>Mr. Robot</h2>
            							<a class="info" href="#">Read More..</a>
         						</div>
-        			    </div>
+        			    </div>';
+    			    }
+    			    ?>
         		</div>
 			<br>
 			<br>
@@ -440,7 +492,6 @@
 						<li id="movie">Movie 10</li>
 					</ul>	
 				</div>
-
 				<div class="col-md-4 left-caro box">
 					<h3 style="text-align:center"><b>Top rated TV Shows</b></h6>
 					<ul>
@@ -457,7 +508,6 @@
 						<li id="movie">TV Show 10</li>
 					</ul>	
 				</div>
-
 		   		<div class="col-md-4 box left-caro ">
 					<h3 style="text-align:center"><b>Top rated Anime</b></h6>
 					<ul>
@@ -477,4 +527,4 @@
 			</div>
 		</div>
 	</body> 
-</html>            
+</html>
