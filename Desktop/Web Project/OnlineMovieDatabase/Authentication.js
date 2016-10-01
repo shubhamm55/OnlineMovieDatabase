@@ -1,3 +1,17 @@
+function priority(val1,val2,val3)
+{
+	if(val2 != 'Guest')
+	{
+		var xmlhttp = new XMLHttpRequest();
+		var data = 'user='+val2+'&id='+val1+'&extra='+val3;
+	    xmlhttp.open("POST", "Landing_Record.php", true);
+		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlhttp.send(data);
+	}
+
+	return true;
+}
+
 function filter()
 {
 	var xmlhttp = new XMLHttpRequest();
