@@ -45,9 +45,10 @@
 					<?php
 						
 						session_start();
-
+						
 						if(isset($_SESSION["prompt"]))
 						{
+							$user = $_SESSION['UserName'];
 							echo '<li><a href="User_Profile.php">' . $_SESSION["UserName"] . '</a></li>
 							<li class="divider"></li>
 							<li><a href="Logout.php">Sign Out  <span class="glyphicon glyphicon-log-out"></span></a></li>
@@ -56,6 +57,7 @@
 						
 						else
 						{
+							$user = "Guest";
 							echo '<li><a href="#">Hi Guest</a></li>
 							<li class="divider"></li>
 							<li><a href="Log_In.php">Log In  <span class="glyphicon glyphicon-log-out"></span></a></li>
@@ -308,71 +310,71 @@
 				
 			<br>
 			<br>
-			<h2 class="heading">Top Rated Anime</h2>
+			<h2 class="heading">Celebrities in Focus</h2>
 				<hr>
 					<div class="container caro">
 						<div id="carousel">
 							<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/fma.jpg" alt="Full Metal Alchemist">
+							<img class="img-responsive caro-img" src="Images/srk.jpg" alt="Shahrukh Khan">
 								<div class="overlay">
-           								<h2>Full Metal Alchemist</h2>
-           								<a class="info" href="TV_Landing.php?id=31911">Read More..</a>
+           								<h2>Shahrukh Khan</h2>
+           								<a class="info" href="celeb_landing.php?id=35742">Read More..</a>
         							</div>
         						</div></figure>
 							<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/hxh.png" alt="Hunter X Hunter">
+							<img class="img-responsive caro-img" src="Images/mf.jpg" alt="Morgan Freeman">
 								<div class="overlay">
-           								<h2>Hunter X Hunter</h2>
-           								<a class="info" href="TV_Landing.php?id=46298">Read More..</a>
+           								<h2>Morgan Freeman</h2>
+           								<a class="info" href="celeb_landing.php?id=192">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/Naruto.jpg" alt="Naruto">
+							<img class="img-responsive caro-img" src="Images/ec.jpg" alt="Emilia Clarke">
 								<div class="overlay">
-           								<h2>Naruto</h2>
-           								<a class="info" href="TV_Landing.php?id=46260">Read More..</a>
+           								<h2>Emilia Clarke</h2>
+           								<a class="info" href="celeb_landing.php?id=1223786">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/dbz.jpg" alt="Dragon Ball Z">
+							<img class="img-responsive caro-img" src="Images/ak.jpg" alt="Aamir Khan">
 								<div class="overlay">
-           								<h2>Dragon Ball Z</h2>
-           								<a class="info" href="TV_Landing.php?id=12971">Read More..</a>
+           								<h2>Aamir Khan</h2>
+           								<a class="info" href="celeb_landing.php?id=52763">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/op.jpg" alt="One Piece">
+							<img class="img-responsive caro-img" src="Images/cn.jpg" alt="Christopher Nolan">
 								<div class="overlay">
-           								<h2>One Piece</h2>
-           								<a class="info" href="TV_Landing.php?id=37854">Read More..</a>
+           								<h2>Chirstopher Nolan</h2>
+           								<a class="info" href="celeb_landing.php?id=525">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/one-punch-man.jpg" alt="One Puch Man">
+							<img class="img-responsive caro-img" src="Images/jl.jpg" alt="Jennifer Lawrence">
 								<div class="overlay">
-           								<h2>One Punch Man</h2>
-           								<a class="info" href="TV_Landing.php?id=63926">Read More..</a>
+           								<h2>Jennifer Lawrence</h2>
+           								<a class="info" href="celeb_landing.php?id=72129">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/avatar.jpg" alt="Avatar: The Last Airbender">
+							<img class="img-responsive caro-img" src="Images/cp.jpg" alt="Chris Pratt">
 								<div class="overlay">
-           								<h2>Avatar: The Last Airbender</h2>
-           								<a class="info" href="TV_Landing.php?id=246">Read More..</a>
+           								<h2>Chris Pratt</h2>
+           								<a class="info" href="celeb_landing.php?id=73457">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/cowboy-bebop.jpg" alt="Cowboy Bebop">
+							<img class="img-responsive caro-img" src="Images/rk.jpg" alt="Ranbir Kapoor">
 								<div class="overlay">
-           								<h2>Cowboy Bebop</h2>
-           								<a class="info" href="TV_Landing.php?id=30991">Read More..</a>
+           								<h2>Ranbir Kapoor</h2>
+           								<a class="info" href="celeb_landing.php?id=85034">Read More..</a>
         							</div>
         						</div></figure>
         						<figure><div class="hovereffect">
-							<img class="img-responsive caro-img" src="Images/Death-Note.jpg" alt="Death Note">
+							<img class="img-responsive caro-img" src="Images/pc.jpg" alt="Priyanka Chopra">
 								<div class="overlay">
-           								<h2>Death Note</h2>
-           								<a class="info" href="TV_Landing.php?id=13916">Read More..</a>
+           								<h2>Priyanka Chopra</h2>
+           								<a class="info" href="celeb_landing.php?id=77234">Read More..</a>
         							</div>
         						</div></figure>
 						</div>
@@ -391,7 +393,49 @@
 				<h2 class="heading">You recently Viewed</h3>
 				<hr>
 				<div class="row">
-					<div class="hovereffect">
+					<?php
+					if($user != "Guest")
+					{
+						include('Database API\tmdb-api.php');
+		                include('Database API\Configuration\default.php');
+		                $tmdb = new TMDB($cnf);
+						mysql_connect("localhost","root","");
+						mysql_select_db("login_db");
+						$i = 0;
+						$result = mysql_query("select * from user_priorities where UserName = '$user' order by TimeStamp DESC") or die("The query failed!");
+						while($row = mysql_fetch_array($result))
+						{
+							$i = $i+1;
+							if($row['Extra'] == 'M')
+							{
+								$movie = $tmdb->getMovie($row['ID']);
+								echo '<div class="hovereffect">
+								<img class="col-sm-3 pick-img img-responsive" src="'. $tmdb->getImageURL('w185') . $movie->getPoster() .'" alt="Interstellar">
+									<div class="overlay">
+		           							<h2>' . $movie->getTitle() . '</h2>
+		           							<a class="info" href="Movie_Landing.php?id=' . $movie->getID() . '" onclick="return priority(\'' . $movie->getID() . '\',\'' . $user . '\',\'M\')">Read More..</a>
+		        						</div>
+		        				</div>';
+	        				}
+	        				else
+	        				{
+	        					$tvshow = $tmdb->getTVShow($row['ID']);
+								echo '<div class="hovereffect">
+								<img class="col-sm-3 pick-img img-responsive" src="'. $tmdb->getImageURL('w185') . $tvshow->getPoster() .'" alt="Interstellar">
+									<div class="overlay">
+		           							<h2>' . $tvshow->getName() . '</h2>
+		           							<a class="info" href="#">Read More..</a>
+		        						</div>
+		        				</div>';	
+	        				}
+        					if($i == 4)
+        						break;
+						}
+					}
+					else
+					{	
+					
+					echo'<div class="hovereffect">
 						<img class="col-sm-3 pick-img img-responsive" src="Images\interstellar.jpg" alt="Interstellar">
 							<div class="overlay">
            							<h2>Interstellar</h2>
@@ -418,7 +462,10 @@
            							<h2>Mr. Robot</h2>
            							<a class="info" href="#">Read More..</a>
         						</div>
-        			    </div>
+        			    </div>';
+    			    }
+    			    ?>
+        		</div>
         		</div>
 			<br>
 			<br>
