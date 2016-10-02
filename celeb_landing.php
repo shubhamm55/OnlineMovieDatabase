@@ -64,16 +64,47 @@
 				include('Database API\tmdb-api.php');
 				$tmdb = new TMDB($conf);
 				$id = $_GET['id'];
-				$movie = $tmdb->getPerson($id);
+				$person = $tmdb->getPerson($id);
+				$movies = $person->getMovieRoles();
+				$tvs= $person->getTVShowRoles();
 				echo      '  
 							<div class="col-md-2">
-									<img src="'. $tmdb->getImageURL('w185') . $movie->getProfile() .'"">
+									<img src="'. $tmdb->getImageURL('w185') . $person->getProfile() .'"">
 							 </div>
 							<div class="col-md-10 movie-info">
-									<h3><u>'. $movie->getName() .'</u></h3>
+									<h3><u>'. $person->getName() .'</u></h3>
 									<br>
-									<h4>Date Of Birth '. $movie->getBirthday() .'</h4>
+									<h4>Date Of Birth '. $person->getBirthday() .'</h4>
 									<br>
+									';
+									if($movies!=null)
+									{
+									echo '<h4>Movies:</h4>
+									<div class="scrollable roles">'
+									;
+									foreach($movies as $movie)
+									{
+										echo '<li><a style="font-size:18px" href="Movie_Landing.php?id='.$movie->getMovieID() .'">'.$movie->getMovieTitle().' </a></li> ';
+									}
+									echo '<br> 
+									<br>
+									</div>
+									<br>';
+									}
+									
+									if($tvs!=null)
+									{
+									echo '<h4>TV Shows:</h4> <div class="scrollable roles">'
+									;
+									foreach($tvs as $tv)
+									{
+										echo '<li><a style="font-size:18px" href="TV_Landing.php?id='.$tv->getTVShowID() .'">'.$tv->getTVShowName().' </a></li> ';
+									}
+									echo '<br> 
+									</div>
+									<br>';
+									}
+									echo '								
 									
 									<h4>Rate this Celebrity : <fieldset class="rating">
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
